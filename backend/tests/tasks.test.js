@@ -9,10 +9,11 @@ describe('GET /api/tasks', () => {
         expect(res.status).toBe(200);
    });
     it('should return object ok', async () => {
-        const res = await request(app).get('/api/tasks');
+        const res = await request(app).get('/api/tasks');   
         // expect(Array.isArray(res.body)).toBe(true);
         expect(typeof res.body).toBe('object');
         expect(res.body).toHaveProperty('tasks');
+        console.log(res.body.tasks,"Data seeded");
     });
 });
 
